@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/style.css">
+  <title>CSS Grid Fundamentals!</title>
+</head>
+
+<body>
+	<!-- h1 - Name	
+			 h3 - Code -->
+	<h1>CSSGrid Columns</h1>
+	<h3>
+		<code>
+			grid-template-columns: 100px 100px 100px 100px 100px;
+			grid-gap: 60px;
+		</code>
+	</h3>
+	<div class="containerColumns">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+		<div class="item">5</div>
+		<div class="item">6</div>
+		<div class="item">7</div>
+		<div class="item">8</div>
+		<div class="item">9</div>
+		<div class="item">10</div>
+	</div>
+
+	<br>
+
+	<h1>CSSGrid Layout</h1>
+	<h3>
+		<code>
+			grid-template-columns: 300px auto 250px;
+			grid-gap: 50px;
+		</code>
+	</h3>
+	<div class="containerLayout">
+		<div class="item">Left Sidebar</div>
+		<div class="item">Centre Space</div>
+		<div class="item">Right Sidebar</div>
+	</div>
+
+	<br>
+
+	<h1>CSSGrid Rows</h1>
+	<h3>
+		<code>
+			grid-template-rows: 50px 80px 100px 500px 120px;
+			grid-gap: 40px;
+		</code>
+	</h3>
+	<div class="containerRows">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+		<div class="item">5</div>
+	</div>
+	<style>
+		
+		h1 {
+			font-size: 40px;
+			text-align: center;
+			margin: 20px;
+		}
+
+		h3 {
+			font-size: 30px;
+			text-align: center;
+			margin: 20px;
+		}
+
+		.containerColumns {
+			display: grid;
+			grid-template-columns: 100px 100px 100px 100px 100px;
+			grid-gap: 60px;
+		}
+
+		.containerLayout {
+			display: grid;
+			height: 400px;
+			grid-template-columns: 300px auto 250px;
+			grid-gap: 50px;
+		}
+		
+		.containerRows {
+			display: grid;
+			grid-template-rows: 50px 80px 100px 500px 120px;
+			grid-gap: 40px;
+		}
+
+	</style>
+
+</body>
+
+</html>
