@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/style.css">
+  <title>Sizing Tracks in CSS Grid!</title>
+</head>
+
+<body>
+  <h1>Grid Sizing and 'fr' unit</h1>
+  <h3>
+    <code>
+      grid-template-columns: 500px 2fr 1fr 1fr; using fr units, fractional units (or maybe Free Space) <br>
+    </code>
+  </h3>
+  <div class="container">
+    <div class="item">500px</div>
+    <div class="item">2fr</div>
+    <div class="item">1fr</div>
+    <div class="item">1fr</div>
+    <div class="item">500px</div>
+    <div class="item">2fr</div>
+    <div class="item">1fr</div>
+    <div class="item">1fr</div>
+    <div class="item">500px</div>
+    <div class="item">2fr</div>
+    <div class="item">1fr</div>
+    <div class="item">1fr</div>
+  </div>
+  
+  <h1>Using Auto and 'fr' together</h1>
+    <h3>
+      <code>
+        grid-template-columns: auto 2fr 1fr; using fr units with auto <br>
+        Auto sizes the whole column as per the text in any included cell
+      </code>
+    </h3>
+    <div class="containerAuto">
+      <div class="item">Auto</div>
+      <div class="item">2fr</div>
+      <div class="item">1fr</div>
+      <div class="item">Auto - It Wraps as per the text</div>
+      <div class="item">2fr</div>
+      <div class="item">1fr</div>
+      <div class="item">Auto</div>
+      <div class="item">2fr</div>
+      <div class="item">1fr</div>
+      <div class="item">Auto</div>
+      <div class="item">2fr</div>
+      <div class="item">1fr</div>
+    </div>
+
+  <style>
+    .container {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: 500px 2fr 1fr 1fr;
+    }
+    .containerAuto {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: auto 2fr 1fr;
+    }
+  </style>
+</body>
+
+</html>
