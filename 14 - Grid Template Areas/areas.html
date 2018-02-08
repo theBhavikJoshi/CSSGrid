@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/style.css">
+  <title>Grid Template Areas</title>
+</head>
+
+<body>
+  <h1>Grid Tempalte Area</h1>
+  <h3>
+    <code>
+      grid-template-areas: 
+        "sidebar1 content sidebar2"
+        "sidebar1 content sidebar2"
+        "footer footer footer";
+      - Gives you a left sidebar, a central content and a right sidebar all spanning 2 rows! There's a footer in the 3rd row spanning all 3 columns!<br>
+      It's also <b>Responsive</b>! Have a look at width 768px
+    </code>
+  </h3>
+  <div class="container">
+    <div class="item item1">
+      <p>I'm Sidebar #1</p>
+    </div>
+    <div class="item item2">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, sed.</p>
+      <p>I'm the Central Content!</p>
+    </div>
+    <div class="item item3">
+      <p>I'm Sidebar #2</p>
+    </div>
+    <div class="item footer">
+      <p>I'm the footer</p>
+    </div>
+  </div>
+
+  <style>
+    .container {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: 1fr 8fr 1fr;
+      grid-template-rows: 200px 200px 200px;
+      grid-template-areas: 
+        "sidebar1 content sidebar2"
+        "sidebar1 content sidebar2"
+        "footer footer footer";
+    }
+
+    .item1 {
+      grid-area: sidebar1;
+    }
+
+    .item3 {
+      grid-area: sidebar2;
+    }
+
+    .item2 {
+      grid-area: content;
+    }
+
+    .footer {
+      grid-area: footer;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        grid-template-rows: 200px 200px 200px 200px 200px;
+        grid-template-areas: 
+          "content content content"
+          "content content content"
+          "sidebar1 sidebar1 sidebar1"
+          "sidebar2 sidebar2 sidebar2"
+          "footer footer footer";
+      }
+    }
+  </style>
+</body>
+
+</html>
